@@ -63,3 +63,8 @@ docker volume inspect[볼륨명]
  ``` sh
  docker run -d --name my-pg -e POSTGRES_PASSWORD=admin1234 -p 5432:5432 -v pgdata:/var/lib/postgresql postgres:18
  ```
+
+ ```sh
+ docker exec -it my-pg psql -U postgres -d kant_shop -c "SELECT * FROM product"
+ docker exec -it kant-pg psql -U postgres -d kant_shop -c "SELECT * FROM product"
+ ```
